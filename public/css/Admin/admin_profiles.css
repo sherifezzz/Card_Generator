@@ -1,0 +1,132 @@
+/* Admin Profile Page */
+.admin-profile {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+    width: 100%; /* Ensure the container takes full width */
+}
+
+/* Profile Header */
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.profile-picture {
+    position: relative;
+}
+
+.profile-picture img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #3b82f6;
+}
+
+.profile-picture button {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+.profile-picture button:hover {
+    background-color: #2563eb;
+}
+
+.profile-info h2 {
+    font-size: 1.5rem;
+    color: #1f2937;
+    margin-bottom: 0.5rem;
+}
+
+.profile-info p {
+    color: #6b7280;
+}
+
+/* Profile Details */
+.profile-details {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.profile-details h2 {
+    font-size: 1.5rem;
+    color: #374151;
+    margin-bottom: 1.5rem;
+}
+
+.details-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.detail-item {
+    background: #f9fafb;
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+}
+
+.detail-item label {
+    font-weight: 500;
+    color: #4b5563;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.detail-item p {
+    color: #374151;
+}
+
+/* Edit Profile Button */
+.edit-profile {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.edit-profile button {
+    padding: 1rem 2rem;
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+}
+
+.edit-profile button:hover {
+    background-color: #2563eb;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .profile-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .details-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    .profile-details {
+        padding: 1rem;
+    }
+}

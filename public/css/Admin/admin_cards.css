@@ -1,0 +1,153 @@
+/* Card Management Page - Centered */
+.admin-card-management {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+}
+
+/* Search Bar */
+.search-bar {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    width: 100%;
+    max-width: 600px;
+}
+
+.search-bar input {
+    flex: 1;
+    padding: 0.75rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.search-bar button {
+    padding: 0.75rem 1.5rem;
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.search-bar button:hover {
+    background-color: #2563eb;
+}
+
+/* Card List Table */
+.card-list {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    padding: 1.5rem;
+    overflow-x: auto;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.card-list table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.card-list th,
+.card-list td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.card-list th {
+    background-color: #f9fafb;
+    color: #374151;
+    font-weight: 600;
+}
+
+.card-list td {
+    color: #6b7280;
+}
+
+/* Action Buttons */
+.card-list button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+    margin-right: 0.5rem;
+}
+
+.card-list .view-card {
+    background-color: #3b82f6;
+    color: white;
+}
+
+.card-list .view-card:hover {
+    background-color: #2563eb;
+}
+
+.card-list .delete-card {
+    background-color: #ef4444;
+    color: white;
+}
+
+.card-list .delete-card:hover {
+    background-color: #dc2626;
+}
+
+/* Add Card Button Section */
+.add-card-section {
+    margin-top: 2rem;
+    text-align: center;
+    width: 100%;
+}
+
+.add-card-section button {
+    padding: 0.75rem 1.5rem;
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.add-card-section button:hover {
+    background-color: #2563eb;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .card-list {
+        padding: 1rem;
+    }
+
+    .card-list th,
+    .card-list td {
+        padding: 0.75rem;
+    }
+
+    .card-list button {
+        margin-bottom: 0.5rem;
+    }
+
+    .search-bar {
+        flex-direction: column;
+    }
+
+    .search-bar input,
+    .search-bar button {
+        width: 100%;
+    }
+}

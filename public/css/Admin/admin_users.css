@@ -1,0 +1,162 @@
+/* User Management Page - Centered */
+.admin-user-management {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    min-height: 80vh; /* Ensure the page takes at least 80% of the viewport height */
+}
+
+/* Search Bar */
+.search-bar {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    width: 100%; /* Ensure the search bar takes full width */
+    max-width: 600px; /* Limit the width of the search bar */
+}
+
+.search-bar input {
+    flex: 1;
+    padding: 0.75rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.search-bar button {
+    padding: 0.75rem 1.5rem;
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.search-bar button:hover {
+    background-color: #2563eb;
+}
+
+/* User List Table */
+.user-list {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    padding: 1.5rem;
+    overflow-x: auto; /* Allows horizontal scrolling if the table overflows */
+    width: 100%; /* Ensure the table takes full width */
+    max-width: 1000px; /* Limit the width of the table */
+}
+
+.user-list table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.user-list th,
+.user-list td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.user-list th {
+    background-color: #f9fafb;
+    color: #374151;
+    font-weight: 600;
+}
+
+.user-list td {
+    color: #6b7280;
+}
+
+/* Action Buttons */
+.user-list button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+    margin-right: 0.5rem;
+}
+
+.user-list .edit-user {
+    background-color: #3b82f6;
+    color: white;
+}
+
+.user-list .edit-user:hover {
+    background-color: #2563eb;
+}
+
+.user-list .delete-user {
+    background-color: #ef4444;
+    color: white;
+}
+
+.user-list .delete-user:hover {
+    background-color: #dc2626;
+}
+
+.user-list .promote-user {
+    background-color: #10b981;
+    color: white;
+}
+
+.user-list .promote-user:hover {
+    background-color: #059669;
+}
+
+/* Add User Button */
+.add-user-section {
+    margin-top: 2rem;
+    text-align: center;
+    width: 100%; /* Ensure the button container takes full width */
+}
+
+.add-user-section button {
+    padding: 0.75rem 1.5rem;
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.add-user-section button:hover {
+    background-color: #2563eb;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .user-list {
+        padding: 1rem;
+    }
+
+    .user-list th,
+    .user-list td {
+        padding: 0.75rem;
+    }
+
+    .user-list button {
+        margin-bottom: 0.5rem;
+    }
+
+    .search-bar {
+        flex-direction: column; /* Stack search input and button vertically */
+    }
+
+    .search-bar input,
+    .search-bar button {
+        width: 100%; /* Full width for search input and button */
+    }
+}

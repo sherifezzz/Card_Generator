@@ -1,0 +1,210 @@
+
+
+/* Main Content */
+main.admin-dashboard {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+    flex: 1;
+}
+
+/* Overview Section */
+.overview {
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.overview h2 {
+    color: #1f2937;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.metrics-grid {
+    display: flex;
+    gap: 1.5rem;
+    overflow-x: auto;
+    /* Allows horizontal scrolling if cards overflow */
+    padding-bottom: 1rem;
+}
+
+/* .metrics-grid{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+} */
+
+.metric-card {
+    background-color: #f9fafb;
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    min-width: 200px;
+    /* Minimum width for each card */
+    flex: 1 1 auto;
+    /* Allows cards to grow and shrink */
+}
+
+.metric-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.metric-card h3 {
+    color: #6b7280;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.metric-card .metric-value {
+    color: #1f2937;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.metric-card .status-online {
+    color: #10b981;
+}
+
+/* Quick Actions Seciton */
+.quick-actions {
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.quick-actions h2 {
+    color: #1f2937;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.action-grid {
+    display: flex;
+    gap: 1.5rem;
+    overflow-x: auto;
+    /* Allows horizontal scrolling if cards overflow */
+    padding-bottom: 1rem;
+    /* Space for scrollbar */
+}
+
+.action-card {
+    background-color: #f9fafb;
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    text-decoration: none;
+    color: #1f2937;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    min-width: 200px;
+    /* Minimum width for each card */
+    flex: 1 1 auto;
+    /* Allows cards to grow and shrink */
+}
+
+.action-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.action-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.action-card p {
+    color: #6b7280;
+    font-size: 0.9rem;
+}
+
+/* Recent Activity Section */
+.recent-activity {
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.recent-activity h2 {
+    color: #1f2937;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.activity-log ul {
+    list-style: none;
+}
+
+.activity-log li {
+    background-color: #f9fafb;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+    color: #1f2937;
+    font-size: 0.9rem;
+}
+
+.activity-log li strong {
+    color: #3b82f6;
+}
+
+.activity-log .timestamp {
+    color: #6b7280;
+    font-size: 0.8rem;
+    margin-left: 0.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+
+    .metrics-grid,
+    .navbar,
+    .actions-grid {
+        flex-wrap: wrap;
+        /* Wrap cards to the next line on smaller screens */
+    }
+
+    .overview,
+    .quick-actions,
+    .recent-activity {
+        padding: 1rem;
+    }
+
+    .metric-card,
+    .action-card {
+        min-width: 150px;
+        /* Smaller cards for mobile */
+        flex: 1 1 100%;
+        /* Full width on small screens */
+    }
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.overview,
+.quick-actions,
+.recent-activity {
+    animation: fadeIn 0.5s ease-out;
+}
+
