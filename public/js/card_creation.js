@@ -136,3 +136,27 @@ async function saveCard() {
         alert(error.message || 'Failed to save card');
     }
 }
+
+// Zoom Controls
+const zoomInButton = document.getElementById('zoomIn');
+const zoomOutButton = document.getElementById('zoomOut');
+const resetZoomButton = document.getElementById('resetZoom');
+const cardDesign = document.querySelector('.card'); // Target the card itself
+
+let scale = 1;
+
+zoomInButton.addEventListener('click', () => {
+    scale += 0.1;
+    cardDesign.style.transform = `scale(${scale})`; // Apply zoom to the card
+});
+
+zoomOutButton.addEventListener('click', () => {
+    scale -= 0.1;
+    if (scale < 0.1) scale = 0.1; // Prevent zooming out too much
+    cardDesign.style.transform = `scale(${scale})`; // Apply zoom to the card
+});
+
+resetZoomButton.addEventListener('click', () => {
+    scale = 1;
+    cardDesign.style.transform = `scale(${scale})`; // Reset zoom
+});
